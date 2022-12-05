@@ -5,9 +5,20 @@ function! myada#before() abort
 endfunction
 
 function! myada#after() abort
+lua <<FIM
+require('lspconfig').als.setup{
+    settings = {
+      ada = {
+        projectFile = "json.gpr";
+      }
+    }
+}
+FIM
+
 endfunction
 
 function! s:adaconfig()
+
   let g:neomake_ada_maker_remove_invalid_entries = 0
   let g:neomake_ada_enabled_makers = ['check']
   let g:neomake_ada_check_maker = {
@@ -22,6 +33,7 @@ function! s:adaconfig()
         \ 'args': ['-gnatef'],
         \ 'errorformat': '%-G%f:%s:,%f:%l:%c: %m,%f:%l: %m',
         \ }
+
 
 endfunction
 
