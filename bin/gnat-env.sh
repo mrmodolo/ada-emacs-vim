@@ -12,9 +12,16 @@ BINARIES=("/home/modolo/opt/GNAT/2021/bin"
 )
 
 TMP=""
+EXEC_PATH=""
+
 for binary in ${BINARIES[@]}
 do
   TMP="$TMP${binary}:"
+  EXEC_PATH="$EXEC_PATH\"${binary}\" "
 done
-
+echo $TMP
+echo
+echo $EXEC_PATH
 export PATH="$TMP$PATH"
+
+
