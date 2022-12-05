@@ -1,0 +1,12 @@
+[options]
+    bootstrap_before = 'myada#before'
+    bootstrap_after = 'myada#after'
+
+[[layers]]
+  name = "checkers"
+  lint_on_the_fly = true
+
+[[layers]]
+  name = 'lsp'
+  filetypes = ['ada']
+  enabled_clients = ['als']
