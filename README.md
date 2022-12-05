@@ -213,3 +213,24 @@ similarly to lsp-ada-project-file in the example above.
 
 https://elpa.gnu.org/packages/doc/ada-mode.html
 
+```
+(setq-default indent-tabs-mode nil)
+(define-key xref--transient-buffer-mode-map (kbd "RET") 'xref-goto-xref)
+(setq xref-prompt-for-identifier nil) ;; only prompt on C-u
+(setq xref-show-xrefs-function #'xref--show-defs-buffer-at-bottom)
+(setq xref-show-definitions-function #'xref--show-defs-buffer-at-bottom)
+
+(electric-pair-mode 1)
+(require 'imenu) ;; also enables speedbar
+(require 'ada-mode)
+(add-to-list 'hippie-expand-try-functions-list 'wisi-skel-hippie-try)
+(define-key ada-mode-map "\C-e"     'hippie-expand)
+(define-key ada-mode-map [down-mouse-3] 'ada-popup-menu)
+(add-hook 'ada-mode-hook
+   (lambda ()
+    (add-hook 'before-save-hook 'delete-trailing-whitespace nil t)
+    (add-hook 'before-save-hook 'copyright-update nil t)
+    (add-hook 'before-save-hook
+              (lambda () (untabify (point-min) (point-max)))
+               nil t)))
+```
