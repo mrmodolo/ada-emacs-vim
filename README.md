@@ -102,6 +102,10 @@ A linha `(add-hook 'ada-mode-hook 'lsp)` foi necessária para carregar automatic
 
 https://github.com/clojure-emacs/cider/blob/master/.dir-locals.el
 
+### ExecPath EmacsWiki 
+
+https://www.emacswiki.org/emacs/ExecPath
+
 ### Ada Mode
 
 https://www.gnu.org/software/emacs/manual/html_node/ada-mode/
