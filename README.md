@@ -203,5 +203,13 @@ The lsp-mode provides built-in support for the ada_language_server and defines
 default customizable configuration values in the lsp-ada group that can be edited 
 similarly to lsp-ada-project-file in the example above.
 
+### Download
 
+[ada-mode](https://elpa.gnu.org/packages/ada-mode.html)
+
+[ada-mode 7.3.1](https://elpa.gnu.org/packages/ada-mode-7.3.1.tar)
+
+### Manual Ada Mode
+
+https://elpa.gnu.org/packages/doc/ada-mode.html
 
