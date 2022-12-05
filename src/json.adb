@@ -15,4 +15,3 @@ begin
    --    {"field1": 1, "name": "thename"}
    Put_Line (My_Obj.Write);
 end JSON;
-
