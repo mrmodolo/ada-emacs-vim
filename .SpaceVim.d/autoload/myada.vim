@@ -1,24 +1,27 @@
 function! myada#before() abort 
   let &t_ut=''
   let $PATH='/home/modolo/opt/GNAT/2021/bin:/home/modolo/opt/GNAT/2021/libexec/gnatstudio/als:'.expand($PATH)
-  call s:adaconfig()
 endfunction
 
 function! myada#after() abort
-lua <<FIM
+lua <<FIMZ
+local lsp_flags = {
+  -- This is the default in Nvim 0.7+
+  debounce_text_changes = 150,
+}
 require('lspconfig').als.setup{
+    flags = lsp_flags,
     settings = {
       ada = {
         projectFile = "json.gpr";
       }
     }
 }
-FIM
-
+FIMZ
+call s:adaconfig()
 endfunction
 
 function! s:adaconfig()
-
   let g:neomake_ada_maker_remove_invalid_entries = 0
   let g:neomake_ada_enabled_makers = ['check']
   let g:neomake_ada_check_maker = {
@@ -33,7 +36,6 @@ function! s:adaconfig()
         \ 'args': ['-gnatef'],
         \ 'errorformat': '%-G%f:%s:,%f:%l:%c: %m,%f:%l: %m',
         \ }
-
-
 endfunction
+
 
