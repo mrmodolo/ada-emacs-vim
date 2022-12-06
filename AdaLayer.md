@@ -76,3 +76,33 @@ require('nvim_lsp').als.setup{
 }
 
 ```
+
+## Algumas configurações e observações
+
+https://docs.google.com/document/d/1pqbCMFbLXwCqGsSFu7cER-v-Fi0tvPUOd2mrZ_P-YoM/edit#heading=h.sx14ykqkknc
+
+## vim-ada
+
+https://github.com/thindil/vim-ada
+
+Configurações para uso do Ada no vim. Não funcionou direiro no SpaceVim.
+
+### Plugins que podem ser usados.
+
+[A.vim](https://github.com/thindil/a.vim)
+
+Allow fast switch between spec ".ads"  and body ".adb" files works with C, C++ headers files too. This plugin wasn't modified.
+
+[AdaBundle](https://github.com/thindil/Ada-Bundle)
+
+This is modified version of standard Ada support for Vim/Neovim. 
+
+This plugin wasn't modified but have some custom configuration in .vimrc file.
+
+[Vista.vim](https://github.com/liuchengxu/vista.vim)
+
+In addition to being a tags viewer, vista.vim can also be a symbol 
+navigator similar to ctrlp-funky. Last but not least, one important goal of 
+vista.vim is to support LSP symbols, which understands the semantics instead of the regex only.
+
+
