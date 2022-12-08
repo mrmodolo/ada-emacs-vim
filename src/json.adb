@@ -1,5 +1,5 @@
 with Ada.Text_IO;   use Ada.Text_IO;
-with GNATCOLL.JSON; use GNATCOLL.JSON;
+with GNATCOLL .JSON; use GNATCOLL.JSON;
 
 procedure JSON is
 

@@ -165,3 +165,16 @@ before packages are loaded."
   )
 )
 ```
+
+
+(setenv "PATH" (concat (getenv "PATH") ":/home/username/.nvm/versions/node/v10.13.0/bin"))
+(setq exec-path (append exec-path '("/home/username/.nvm/versions/node/v10.13.0/bin")))
+
+## C.4.1 General Variables
+
+https://www.gnu.org/software/emacs/manual/html_node/emacs/General-Variables.html
+
+EMACSPATH ¶
+A colon-separated list of directories to search for executable files. If set, 
+Emacs uses this in addition to PATH (see below) when initializing the 
+variable exec-path (see Running Shell Commands from Emacs).
