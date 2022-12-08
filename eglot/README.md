@@ -10,3 +10,13 @@
 
 ## spacemacs [source](https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Blang/html)
 
+### Variáveis
+
+Definidas em config.el
+
+(defvar web-fmt-tool 'web-beautify
+  "The formatter to format a CSS/SCSS/Less file. Possible values are `web-beautify' and `prettier'.")
+
+(defvar css-enable-lsp nil
+  "If non-nil, enable lsp-mode in css-mode buffers.")  
+
