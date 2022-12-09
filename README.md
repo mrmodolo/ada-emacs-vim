@@ -244,3 +244,4 @@ https://elpa.gnu.org/packages/doc/ada-mode.html
 
                
 ```
+[Creating a Spacemacs Layer from an Existing Emacs Package](https://medium.com/@cgrinaldi/creating-a-spacemacs-layer-from-an-existing-emacs-package-efd474bb422d)
